@@ -3,13 +3,13 @@ import {View, Text, Button, StyleSheet} from 'react-native';
 
 const Home = props =>{
 return(
-    <View Style = {styles.screen}>
+    <View style = {styles.screen}>
 
 <Text> Home Screen</Text>
 
-<Button onPress={() =>props.navigation.navigate('About')}
+<Button style = {styles.buttonStyle} onPress={() =>props.navigation.navigate('About')}
 title = 'About Me!'/>
-<Button onPress={() =>props.navigation.navigate('Budget')}
+<Button style = {styles.buttonStyle} onPress={() =>props.navigation.navigate('Budget')}
 title = 'budget'/>
 
     </View>
@@ -22,6 +22,10 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent: 'center',
         alignItems: 'center',
+    },buttonStyle:{
+        width:'50%',
+        padding: '10px'
+    
     }
 })
 
